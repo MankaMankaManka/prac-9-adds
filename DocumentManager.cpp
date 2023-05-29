@@ -26,6 +26,29 @@ void DocumentManager::addDocument(std::string name, int id, int license_limit){
     
 }
 
+void DocumentManager::addPatron(int patronID){
+ patrons.push_back(patronID);
+}
+
+bool DocumentManager::borrowDocument(int docid, int patronID){
+    for (int i=0; i<patrons.size(); i++){
+        if (patrons[i]==patronID){
+            return true;
+        }
+    }
+    
+    return false;
+    
+    
+}
+
+
+void DocumentManager::returnDocument(int docid, int patronID){
+    
+    
+}
+
+
 int DocumentManager::search(std::string name) // returns docid if name is in the document collection or 0 if the name is not in the collection
 {
         DocumentManager* pCrawl = this;
