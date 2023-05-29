@@ -14,8 +14,7 @@ int docid;
 std::vector<int> idvect;
 int limit;
 int borrowed=0;
-
- public:
+    
     DocumentManager(){
     this->isWordEnd = false;
  
