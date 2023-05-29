@@ -4,7 +4,8 @@
 #include <vector>
 
 class DocumentManager {
- private:
+    public:
+
 std::vector<int> patrons;
 DocumentManager* children[26];
 DocumentManager* integer[10];
@@ -14,7 +15,8 @@ std::vector<int> idvect;
 int limit;
 int borrowed=0;
 
-DocumentManager(){
+ public:
+    DocumentManager(){
     this->isWordEnd = false;
  
         for (int i = 0; i < 26; i++) {
