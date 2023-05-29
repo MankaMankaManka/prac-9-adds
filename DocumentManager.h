@@ -7,21 +7,10 @@ class DocumentManager {
     public:
 
 std::vector<int> patrons;
-DocumentManager* children[26];
-DocumentManager* integer[10];
-bool isWordEnd;
-int docid;
-std::vector<int> idvect;
-int limit;
-int borrowed=0;
-    
-    DocumentManager(){
-    this->isWordEnd = false;
- 
-        for (int i = 0; i < 26; i++) {
-            this->children[i] = nullptr;
-        }
-};
+std::vector<int> docID;
+std::vector<std::string> docname;
+std::vector<int> doclicense_limit;
+std::vector<int> borrowed;
 
 void addDocument(std::string name, int id, int license_limit);
 
