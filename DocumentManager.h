@@ -1,14 +1,16 @@
 #ifndef DOCUMENTMANAGER_H
 #define DOCUMENTMANAGER_H
 #include <iostream>
+#include <vector>
 
 class DocumentManager {
  private:
- 
+std::vector<int> patrons;
 DocumentManager* children[26];
 DocumentManager* integer[10];
 bool isWordEnd;
 int docid;
+std::vector<int> idvect;
 int limit;
 int borrowed=0;
 
