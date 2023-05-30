@@ -17,8 +17,7 @@ bool DocumentManager::borrowDocument(int docid, int patronID){
             for (int i=0; i<docID.size(); i++){
                 if (docid==docID[i]){
                     if (borrowed[i]<doclicense_limit[i]){
-                       borrowed[i]=borrowed[i]+1;
-                       return true;
+                       borrowed[i]=borrowed[i]-1;
                     }
                 }
                 
