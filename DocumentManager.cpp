@@ -31,14 +31,18 @@ bool DocumentManager::borrowDocument(int docid, int patronID){
 
 
 void DocumentManager::returnDocument(int docid, int patronID){
+ for (int i=0; i<patrons.size(); i++){
+        if (patrons[i]==patronID){
             for (int i=0; i<docID.size(); i++){
                 if (docid==docID[i]){
-                    if (borrowed[i]<doclicense_limit[i]){
+                    if (borrowed[i]>0){
                        borrowed[i]=borrowed[i]-1;
                     }
                 }
-                
             }
+            
+        }
+    }
 }
 
 int DocumentManager::search(std::string name) // returns docid if name is in the document collection or 0 if the name is not in the collection
